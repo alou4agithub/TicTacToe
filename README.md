@@ -24,8 +24,6 @@ The goal of the project is to implement a REST backend for a game of tic-tac-toe
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
-
 * [KnockoutJS] - standalone JavaScript implementation of the Model-View-ViewModel pattern!
 * [Django] - high-level Python Web framework
 * [Python] - high-level programming language
