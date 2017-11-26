@@ -33,12 +33,17 @@ The goal of the project is to implement a REST backend for a game of tic-tac-toe
 
 This app requires requires [Python](https://www.python.org/) 3.6 to run.
 
-Install the dependencies from requirements.txt
+Git Clone
+
+```sh
+$ git clone https://github.com/farhanafayez/TicTacToe
+```
+
+Install the dependencies from requirements.txt by creating and activating a new virtual environment however you wish. Ex: Conda etc.
 
 ```sh
 $ cd src/tictactoe/
 $ pip install requirements.txt
-$ node app
 ```
 
 ### Running the application
