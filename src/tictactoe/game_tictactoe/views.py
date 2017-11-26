@@ -4,24 +4,21 @@ from django.views.generic.base import View
 from django.http import HttpRequest
 from django.http import JsonResponse
 import json
-# Create your views here.
 import random
 
 
-# Add fail tests
 def game(request):
    return render(request,'game.html',{})
 
-
 def tic(request):
-   # GEtting the board from post
+   # Getting the board from post
    if request.method == 'POST':
       body_unicode = request.body.decode('utf-8')
       # loading it as json
       body = json.loads(body_unicode)
-      #extractiong from the json
+      # extracting from the json
       input_str = body['value']
-      #converting into integers
+      # converting into integers
       input = int(input_str)
       #  extracting again
       board = body['x']
@@ -45,8 +42,6 @@ def tic(request):
       winner = 0
       return JsonResponse({'input': input, 'board': board, 'winner': winner})
 
-
-
 def opponent_fun(board):
       while True:
 
@@ -56,7 +51,6 @@ def opponent_fun(board):
          if board[opponent] != 'o' and board[opponent] != 'x':
           board[opponent] = 'o'
           return board
-
 
 def check(board, char, cell1, cell2, cell3):
     if board[cell1]  == char and board[cell2] == char and board[cell3] == char:
